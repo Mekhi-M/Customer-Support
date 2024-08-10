@@ -24,7 +24,7 @@ export async function POST(req) {
 	// Create a chat completion request to the OpenAI API
 	const completion = await openai.chat.completions.create({
 		messages: [{ role: "system", content: systemPrompt }, ...data], // Include the system prompt and user messages
-		model: "text-embedding-3-large", // Specify the model to use
+		model: "gpt-3.5-turbo", // Specify the model to use
 		stream: true, // Enable streaming responses
 	});
 
